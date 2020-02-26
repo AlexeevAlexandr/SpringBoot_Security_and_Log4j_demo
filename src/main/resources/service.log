@@ -1,0 +1,4 @@
+2020-02-26 17:58:57 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-26 17:58:57 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-26 17:59:00 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-26 17:59:00 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
