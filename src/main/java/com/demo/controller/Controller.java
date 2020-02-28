@@ -2,7 +2,7 @@ package com.demo.controller;
 
 import com.demo.entity.Customer;
 import com.demo.exception.CustomerException;
-import com.demo.servvice.CustomerService;
+import com.demo.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

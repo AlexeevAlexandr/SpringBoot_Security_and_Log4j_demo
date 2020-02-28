@@ -1,4 +1,4 @@
-package com.demo.servvice;
+package com.demo.service;
 
 import com.demo.entity.Customer;
 
@@ -9,8 +9,6 @@ public interface CustomerService {
     List<Customer> findAll();
 
     Customer findById(int id);
-
-    Customer findByName(String name);
 
     Customer create(Customer customer);
 

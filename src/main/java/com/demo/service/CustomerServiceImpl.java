@@ -1,4 +1,4 @@
-package com.demo.servvice;
+package com.demo.service;
 
 import com.demo.entity.Customer;
 import com.demo.repository.CustomerRepository;
@@ -43,19 +43,6 @@ public class CustomerServiceImpl implements CustomerService {
             }
         } catch (Exception e){
             logger.error("Attempt to get customer by id - false\n" + e.getMessage());
-            return null;
-        }
-    }
-
-    @Override
-    public Customer findByName(String name) {
-        try {
-            logger.info("Attempt to get customer by name");
-            Customer customer = customerRepository.findByName(name);
-            logger.info("Attempt to get customer by name - success");
-            return customer;
-        } catch (Exception e) {
-            logger.error("Attempt to get customer by name - false\n" + e.getMessage());
             return null;
         }
     }

@@ -1,7 +1,10 @@
 package com.demo.security;
 
+import com.demo.entity.Admin;
 import com.demo.entity.Customer;
+import com.demo.repository.AdminRepository;
 import com.demo.repository.CustomerRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -16,35 +19,34 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
+@AllArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomerRepository customerRepository;
-
-    @Autowired
-    public SecurityConfig(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
+    private final AdminRepository adminRepository;
 
     @Autowired
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(name -> {
-            Customer customer = customerRepository.findByName(name);
-            if (customer != null) {
-                if (customer.getName().equalsIgnoreCase("ADMIN")) {
-                    return new org.springframework.security.core.userdetails.User(
-                            passwordEncoder().encode(customer.getName()),
-                            passwordEncoder().encode(customer.getPassword().getPassword()),
-                            true, true, true, true,
-                            AuthorityUtils.createAuthorityList("ROLE_ADMIN"));
-                } else {
+            if (name.equalsIgnoreCase("admin")){
+                Admin admin = adminRepository.findById(1);
+                return new org.springframework.security.core.userdetails.User(
+                        passwordEncoder().encode(admin.getName()),
+                        passwordEncoder().encode(admin.getPassword()),
+                        true, true, true, true,
+                        AuthorityUtils.createAuthorityList("ROLE_ADMIN"));
+            } else {
+                Customer customer = customerRepository.findByName(name);
+                if (customer != null) {
                     return new org.springframework.security.core.userdetails.User(
                             passwordEncoder().encode(customer.getName()),
                             passwordEncoder().encode(customer.getPassword().getPassword()),
                             true, true, true, true,
                             AuthorityUtils.createAuthorityList("ROLE_USER"));
+
+                } else {
+                    throw new UsernameNotFoundException("Could not find the user '" + name + "'");
                 }
-            } else{
-                throw new UsernameNotFoundException("Could not find the user '" + name + "'");
             }
         });
     }

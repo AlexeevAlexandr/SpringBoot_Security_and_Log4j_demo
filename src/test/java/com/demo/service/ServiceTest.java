@@ -3,7 +3,6 @@ package com.demo.service;
 import com.demo.entity.Customer;
 import com.demo.entity.Password;
 import com.demo.repository.CustomerRepository;
-import com.demo.servvice.CustomerServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

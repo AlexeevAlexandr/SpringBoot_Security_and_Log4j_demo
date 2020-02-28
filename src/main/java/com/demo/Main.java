@@ -1,9 +1,10 @@
 package com.demo;
 
+import com.demo.entity.Admin;
 import com.demo.entity.Customer;
 import com.demo.entity.Password;
-import com.demo.repository.CustomerRepository;
-import com.demo.servvice.CustomerService;
+import com.demo.service.AdminService;
+import com.demo.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import java.util.List;
 public class Main {
 
     private final CustomerService customerService;
+    private final AdminService adminService;
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
@@ -26,7 +28,10 @@ public class Main {
         List<Customer> customers = customerService.findAll();
         if (customers.isEmpty()){
             customerService.create(new Customer("user", new Password("password")));
-            customerService.create(new Customer("admin", new Password("admin")));
+        }
+        List<Admin> admins = adminService.findAll();
+        if (admins.isEmpty()){
+            adminService.create(new Admin("admin"));
         }
     }
 }

@@ -2,3 +2,135 @@
 2020-02-26 17:58:57 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
 2020-02-26 17:59:00 INFO  CustomerServiceImpl:22 - Attempt to get all customers
 2020-02-26 17:59:00 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:32:08 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:32:09 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:32:09 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:32:09 INFO  CustomerServiceImpl:55 - Customer created with ID: 1
+2020-02-28 13:32:09 INFO  AdminServiceImpl:22 - Attempt to get admin list
+2020-02-28 13:32:09 INFO  AdminServiceImpl:24 - Attempt to get admin list - success
+2020-02-28 13:32:09 INFO  AdminServiceImpl:35 - Attempt to create an admin
+2020-02-28 13:32:09 INFO  AdminServiceImpl:37 - Admin created with ID: 1
+2020-02-28 13:32:26 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:32:26 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:32:32 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:32:32 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:32:34 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:32:34 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:32:54 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:32:54 INFO  CustomerServiceImpl:55 - Customer created with ID: 2
+2020-02-28 13:32:59 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:32:59 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:66 - Attempt to update a customer
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:33:19 INFO  CustomerServiceImpl:70 - Attempt to update a customer - success
+2020-02-28 13:33:30 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:33:30 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:33:37 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:33:37 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:33:37 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:33:37 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:33:42 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:33:42 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:34 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:34 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:34 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:35 INFO  CustomerServiceImpl:55 - Customer created with ID: 1
+2020-02-28 13:34:35 INFO  AdminServiceImpl:22 - Attempt to get admin list
+2020-02-28 13:34:35 INFO  AdminServiceImpl:24 - Attempt to get admin list - success
+2020-02-28 13:34:35 INFO  AdminServiceImpl:35 - Attempt to create an admin
+2020-02-28 13:34:35 INFO  AdminServiceImpl:37 - Admin created with ID: 1
+2020-02-28 13:34:38 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:38 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:39 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:39 INFO  CustomerServiceImpl:55 - Customer created with ID: 2
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:40 INFO  CustomerServiceImpl:55 - Customer created with ID: 3
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:66 - Attempt to update a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:70 - Attempt to update a customer - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:35 - Attempt to get customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:38 - Attempt to get customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:55 - Customer created with ID: 4
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:35 - Attempt to get customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:38 - Attempt to get customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:35 - Attempt to get customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:38 - Attempt to get customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:55 - Customer created with ID: 5
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:55 - Customer created with ID: 6
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:41 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:55 - Customer created with ID: 0
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:35 - Attempt to get customer by id
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:38 - Attempt to get customer by id - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:66 - Attempt to update a customer
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:42 INFO  CustomerServiceImpl:70 - Attempt to update a customer - success
+2020-02-28 13:34:45 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:45 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:45 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:45 INFO  CustomerServiceImpl:55 - Customer created with ID: 1
+2020-02-28 13:34:45 INFO  AdminServiceImpl:22 - Attempt to get admin list
+2020-02-28 13:34:45 INFO  AdminServiceImpl:24 - Attempt to get admin list - success
+2020-02-28 13:34:45 INFO  AdminServiceImpl:35 - Attempt to create an admin
+2020-02-28 13:34:45 INFO  AdminServiceImpl:37 - Admin created with ID: 1
+2020-02-28 13:34:51 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:51 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:55 INFO  CustomerServiceImpl:22 - Attempt to get all customers
+2020-02-28 13:34:55 INFO  CustomerServiceImpl:24 - Attempt to get all customers - success
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:53 - Attempt to create a customer
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:55 - Customer created with ID: 2
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:85 - Attempt to delete a customer
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:103 - Attempt to check customer by id
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:105 - Attempt to check customer by id - success
+2020-02-28 13:34:56 INFO  CustomerServiceImpl:88 - Attempt to delete a customer - success

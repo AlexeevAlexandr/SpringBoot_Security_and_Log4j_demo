@@ -3,7 +3,7 @@ package com.demo.controller;
 import com.demo.entity.Customer;
 import com.demo.entity.Password;
 import com.demo.helper.TestHelper;
-import com.demo.servvice.CustomerService;
+import com.demo.service.CustomerService;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
