@@ -5,6 +5,7 @@ import com.demo.entity.Customer;
 import com.demo.repository.AdminRepository;
 import com.demo.repository.CustomerRepository;
 import lombok.AllArgsConstructor;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -13,6 +14,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,6 +24,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @AllArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    final static Logger logger = Logger.getLogger(SecurityConfig.class);
     private final CustomerRepository customerRepository;
     private final AdminRepository adminRepository;
 
@@ -30,7 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(name -> {
             if (name.equalsIgnoreCase("admin")){
                 Admin admin = adminRepository.findByName("admin");
-                return new org.springframework.security.core.userdetails.User(
+                logger.info(String.format("Attempt to log as admin with name '%s'", name));
+                return new User(
                         passwordEncoder().encode(admin.getName()),
                         passwordEncoder().encode(admin.getPassword()),
                         true, true, true, true,
@@ -38,14 +42,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             } else {
                 Customer customer = customerRepository.findByName(name);
                 if (customer != null) {
-                    return new org.springframework.security.core.userdetails.User(
+                    logger.info(String.format("Attempt to log as user with name '%s'", name));
+                    return new User(
                             passwordEncoder().encode(customer.getName()),
                             passwordEncoder().encode(customer.getPassword().getPassword()),
                             true, true, true, true,
                             AuthorityUtils.createAuthorityList("ROLE_USER"));
-
                 } else {
-                    throw new UsernameNotFoundException("Could not find the user '" + name + "'");
+                    logger.info(String.format("Unsatisfied attempt to log, name: '%s' not found", name));
+                    throw new UsernameNotFoundException(String.format("Could not find the name '%s'", name));
                 }
             }
         });
