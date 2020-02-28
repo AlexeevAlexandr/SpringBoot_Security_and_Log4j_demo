@@ -44,7 +44,7 @@ public class AdminServiceImpl implements AdminService{
     public Admin update(Admin admin) {
         try {
             logger.info("Attempt to update admin password");
-            Admin adminToSave = adminRepository.findById(1);
+            Admin adminToSave = adminRepository.findByName(admin.getName());
             adminToSave.setPassword(admin.getPassword());
             admin = adminRepository.save(adminToSave);
             logger.info("Attempt to update admin password - success");

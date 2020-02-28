@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(name -> {
             if (name.equalsIgnoreCase("admin")){
-                Admin admin = adminRepository.findById(1);
+                Admin admin = adminRepository.findByName("admin");
                 return new org.springframework.security.core.userdetails.User(
                         passwordEncoder().encode(admin.getName()),
                         passwordEncoder().encode(admin.getPassword()),
@@ -61,6 +61,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/customer").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/customer").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/customer/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/admin").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/admin").hasRole("ADMIN")
                 .and()
                 .csrf().disable();
     }

@@ -10,5 +10,5 @@ public interface AdminRepository extends CrudRepository<Admin, Integer> {
     @Override
     List<Admin> findAll();
 
-    Admin findById(int id);
+    Admin findByName(String name);
 }

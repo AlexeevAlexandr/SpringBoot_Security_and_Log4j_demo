@@ -25,7 +25,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
-public class ControllerTest {
+public class UserControllerTest {
 
     @Autowired
     private CustomerService customerService;
