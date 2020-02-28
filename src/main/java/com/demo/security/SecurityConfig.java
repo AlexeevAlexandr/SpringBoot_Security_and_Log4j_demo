@@ -3,8 +3,8 @@ package com.demo.security;
 import com.demo.entity.Customer;
 import com.demo.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -29,12 +29,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(name -> {
             Customer customer = customerRepository.findByName(name);
-            if (customer != null){
-                return new org.springframework.security.core.userdetails.User(
-                        "{noop}"+ customer.getName(), "{noop}"+ customer.getPassword().getPassword(),
-                        true, true, true, true,
-                        AuthorityUtils.createAuthorityList("USER"));
-            } else {
+            if (customer != null) {
+                if (customer.getName().equalsIgnoreCase("ADMIN")) {
+                    return new org.springframework.security.core.userdetails.User(
+                            passwordEncoder().encode(customer.getName()),
+                            passwordEncoder().encode(customer.getPassword().getPassword()),
+                            true, true, true, true,
+                            AuthorityUtils.createAuthorityList("ROLE_ADMIN"));
+                } else {
+                    return new org.springframework.security.core.userdetails.User(
+                            passwordEncoder().encode(customer.getName()),
+                            passwordEncoder().encode(customer.getPassword().getPassword()),
+                            true, true, true, true,
+                            AuthorityUtils.createAuthorityList("ROLE_USER"));
+                }
+            } else{
                 throw new UsernameNotFoundException("Could not find the user '" + name + "'");
             }
         });
@@ -42,11 +51,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().fullyAuthenticated().and().httpBasic().and().csrf().disable();
+        http.
+                httpBasic()
+                .and()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.GET, "/customer/**").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+                .antMatchers(HttpMethod.POST, "/customer").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/customer").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/customer/**").hasRole("ADMIN")
+                .and()
+                .csrf().disable();
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
+    private PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }

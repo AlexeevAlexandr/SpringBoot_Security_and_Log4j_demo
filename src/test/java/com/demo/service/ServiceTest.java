@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.service;
 
 import com.demo.entity.Customer;
 import com.demo.entity.Password;

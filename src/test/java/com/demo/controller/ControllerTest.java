@@ -1,11 +1,9 @@
-package com.demo;
+package com.demo.controller;
 
 import com.demo.entity.Customer;
 import com.demo.entity.Password;
 import com.demo.helper.TestHelper;
-import com.demo.repository.CustomerRepository;
 import com.demo.servvice.CustomerService;
-import com.demo.servvice.CustomerServiceImpl;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
@@ -86,7 +84,7 @@ public class ControllerTest {
     @SuppressWarnings("unchecked")
     public void createWithEmptyName() throws Exception {
         JSONObject jsonObject = testHelper.getJsonObjectFromFile("json/entity.json");
-        jsonObject.put("user", "");
+        jsonObject.put("name", "");
 
         given().contentType(MediaType.APPLICATION_JSON_VALUE).body(jsonObject.toString()).
                 when().post("/customer").

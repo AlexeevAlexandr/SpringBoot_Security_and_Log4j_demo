@@ -11,9 +11,9 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping(value = "/customer")
-public class controller {
+@AllArgsConstructor
+public class Controller {
 
     private final CustomerService customerService;
 

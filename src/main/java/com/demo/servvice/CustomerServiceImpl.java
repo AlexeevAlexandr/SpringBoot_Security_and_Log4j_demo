@@ -48,6 +48,19 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer findByName(String name) {
+        try {
+            logger.info("Attempt to get customer by name");
+            Customer customer = customerRepository.findByName(name);
+            logger.info("Attempt to get customer by name - success");
+            return customer;
+        } catch (Exception e) {
+            logger.error("Attempt to get customer by name - false\n" + e.getMessage());
+            return null;
+        }
+    }
+
+    @Override
     public Customer create(Customer customer) {
         try {
             logger.info("Attempt to create a customer");
